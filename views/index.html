@@ -13,12 +13,218 @@
   </head>
   <body>
     <header>
-      <h1>
-       ここは個人的な勉強スペースです。.......
-      </h1>
+      <nav class="navbar navbar-dark fixed-top bg-dark">
+        <!-- ナビゲーションバー -->
+        <a class="navbar-brand" href="#">サいしのお勉強スペース</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- ナビゲーションスペース -->
+        <div class="collapse navbar-collapse" id="navbarsExample01">
+          <ul class="nav navbar-nav nav-pills mr-auto">
+            <li class="nav-item">
+              <a class="nav-link active closeNavi" href="#home" data-target="#home" data-toggle="tab">トップ</a>
+            </li>
+            <li class="nav-item closeNavi">
+              <a class="nav-link" href="#link" data-target="#link" data-toggle="tab">関連リンク</a>
+            </li>
+            <li class="nav-item closeNavi">
+              <a class="nav-link disabled" href="#" data-toggle="tab">準備中</a>
+            </li>
+            <!-- ブルダウンメニュー -->
+            <li class="nav-item dropdown">
+              <a class="navi nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">タスク</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item closeNavi" href="#action" data-target="#action" data-toggle="tab">アクティブタスク</a>
+                <a class="dropdown-item closeNavi" href="#another"  data-target="#action" data-toggle="tab">クローズタスク</a>
+                <a class="dropdown-item closeNavi disabled" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-md-0">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+      </nav>
     </header>
 
     <main>
+      <div class="tab-content">
+        <div id="home" class="tab-pane active">
+          <!-- トップ -->
+          <h1 class="text-white bg-secondary"><small>トップ</small></h1>
+          <p>ここは個人的な勉強のためのスペースで<br/>
+             内容は主に以下。</p>
+          <li>Bracketsの使い方になれる</li>
+          <li>Emmetの使い方になれる</li>
+          <li>Bootstrapの勉強</li>
+          <li>Jqueryの勉強</li>
+          <li>レスポンシブルなサイト作成の勉強</li>
+          <li>HTML/CSS/JavaScriptの勉強</li>
+          <li>サイトデザインの勉強</li>
+          <li><a href="p5js.html">P5.jsのお勉強</a></li>
+          
+          <h1 class="text-white bg-secondary my-4"><small>いろいろなボタン</small></h1>
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-secondary">Secondary</button>
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-light">Light</button>
+          <button type="button" class="btn btn-dark">Dark</button>
+          <button type="button" class="btn btn-link">Link</button>
+          
+          <a class="btn btn-primary" href="#" role="button">Link</a>
+          <button class="btn btn-primary" type="submit">Button</button>
+          <input class="btn btn-primary" type="button" value="Input">
+          <input class="btn btn-primary" type="submit" value="Submit">
+          <input class="btn btn-primary" type="reset" value="Reset">
+          
+          <button type="button" class="btn btn-outline-primary">Primary</button>
+          <button type="button" class="btn btn-outline-secondary">Secondary</button>
+          <button type="button" class="btn btn-outline-success">Success</button>
+          <button type="button" class="btn btn-outline-danger">Danger</button>
+          <button type="button" class="btn btn-outline-warning">Warning</button>
+          <button type="button" class="btn btn-outline-info">Info</button>
+          <button type="button" class="btn btn-outline-light">Light</button>
+          <button type="button" class="btn btn-outline-dark">Dark</button>
+          
+          <!-- Large button -->
+          <button type="button" class="btn btn-primary btn-lg">Large button</button>
+          <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+          <!-- Small button -->
+          <button type="button" class="btn btn-primary btn-sm">Small button</button>
+          <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+          
+          <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+          <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+          
+          <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
+          <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>
+          
+          <button type="button" class="btn btn-lg btn-primary" disabled="disabled">Primary button</button>
+          <button type="button" class="btn btn-secondary btn-lg" disabled="disabled">Button</button>
+          
+          <a href="#" class="btn btn-primary btn-lg disabled" role="button" aria-disabled="true">Primary link</a>
+          <a href="#" class="btn btn-secondary btn-lg disabled" role="button" aria-disabled="true">Link</a>
+          
+          <div class="w-25 p-3" style="background-color: #eee;">Width 25%</div>
+          <div class="w-50 p-3" style="background-color: #eee;">Width 50%</div>
+          <div class="w-75 p-3" style="background-color: #eee;">Width 75%</div>
+          <div class="w-100 p-3" style="background-color: #eee;">Width 100%</div>
+          
+          <div style="height: 100px; background-color: rgba(255,0,0,1);">
+            <div class="h-25 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,1)">Height 25%</div>
+            <div class="h-50 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,1)">Height 50%</div>
+            <div class="h-75 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,1)">Height 75%</div>
+            <div class="h-100 d-inline-block" style="width: 120px; background-color: rgba(0,0,255,1)">Height 100%</div>
+          </div>
+          
+          <p class="text-primary">.text-primary</p>
+          <p class="text-secondary">.text-secondary</p>
+          <p class="text-success">.text-success</p>
+          <p class="text-danger">.text-danger</p>
+          <p class="text-warning">.text-warning</p>
+          <p class="text-info">.text-info</p>
+          <p class="text-light bg-dark">.text-light</p>
+          <p class="text-dark">.text-dark</p>
+          <p class="text-muted">.text-muted</p>
+          <p class="text-white bg-dark">.text-white</p>
+          
+          <div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+          <div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+          <div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+          <div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+          <div class="p-3 mb-2 bg-warning text-white">.bg-warning</div>
+          <div class="p-3 mb-2 bg-info text-white">.bg-info</div>
+          <div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+          <div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+          <div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+          
+          <div class="alert alert-primary" role="alert">primary</div>
+          <div class="alert alert-secondary" role="alert">secondary</div>
+          <div class="alert alert-success" role="alert">success</div>
+          <div class="alert alert-danger" role="alert">danger</div>
+          <div class="alert alert-warning" role="alert">warning</div>
+          <div class="alert alert-info" role="alert">info</div>
+          <div class="alert alert-light" role="alert">light</div>
+          <div class="alert alert-dark" role="alert">dark</div>
+          
+          <span class="badge badge-primary">Primary</span>
+          <span class="badge badge-secondary">Secondary</span>
+          <span class="badge badge-success">Success</span>
+          <span class="badge badge-danger">Danger</span>
+          <span class="badge badge-warning">Warning</span>
+          <span class="badge badge-info">Info</span>
+          <span class="badge badge-light">Light</span>
+          <span class="badge badge-dark">Dark</span>
+          
+          <span class="border border-primary"></span>
+          <span class="border border-secondary"></span>
+          <span class="border border-success"></span>
+          <span class="border border-danger"></span>
+          <span class="border border-warning"></span>
+          <span class="border border-info"></span>
+          <span class="border border-light"></span>
+          <span class="border border-dark"></span>
+          <span class="border border-white"></span>
+        </div>
+        
+        <!-- 関連リンク -->
+        <div id="link" class="tab-pane">
+        <div class="mb-4">
+        <h1 class="text-white bg-secondary"><small>公式サイト</small></h1>
+        <li><a href="https://jquery.com/">Jquery 公式ページ</a></li>
+        <li><a href="https://getbootstrap.com/">bootstrap 公式ページ</a></li>
+        </div>
+        <div class="mb-4">
+        <h1 class="text-white bg-secondary"><small>個人的なSNS</small></h1>
+        <li><a href="https://twitter.com/himagaku84">Twitter(個人)</a></li>
+        <li><a href="https://bookmeter.com/users/750468">bookmeter(個人)</a></li>
+        </div>
+        </div>
+        
+        <!-- アクティブタスク -->
+        <div id="action" class="tab-pane">
+          <h1 class="text-white bg-secondary"><small>アクティブタスク</small></h1>
+            <li>レスポンシブル対応　<span class="badge badge-warning">未着手</span></li>
+            <li>検索機能　<span class="badge badge-warning">未着手</span></li>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+          <!-- クローズタスク -->
+          <div id="another">
+          <h1 class="text-white bg-secondary"><small>クローズタスク</small></h1>
+            <li>ナビゲーションの作成　<span class="badge badge-success">完了</span></li>
+            <li>コンテンツのアクティブ切替　<span class="badge badge-success">完了</span></li>
+            <li>ナビメニューのアクティブ切替　<span class="badge badge-success">完了</span></li>
+            <li>ナビ選択時の自動クローズ　<span class="badge badge-success">完了</span></li>
+          </div>
+        </div>
+      </div>
+
       <p class="bold">簡易的な掲示板を作成してみたいな。</p>
       
       <p>Tell me your hopes and dreams:</p>
@@ -32,10 +238,32 @@
         <ul id="dreams"></ul>
       </section>
     </main>
-
-    <footer>
+    <!-- フッターはコピーライト -->
+    <footer class="text-center text-muted border-top border-secondary mt-4">
       Copyright 2019 Saishi himagaku84
     </footer>
-
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+    <!-- Original JavaScript -->
+    <!-- ナビゲーションのオートクローズとスクロール -->
+    <script>
+      $(function () {
+        // ナビのリンク押下
+        $(".closeNavi").click(function(event) {
+          // ナビのクローズ
+          $(".navbar-collapse").collapse('hide');
+          // タブ切替後にアンカーの高さまでスクロール
+          var href = $(this).attr("href");
+          $('.nav a[href="'+href+'"]').tab('show');
+          var position = $(href).offset().top;
+          scrollTo(0, position-75);
+        });
+      });
+    </script>
   </body>
 </html>
