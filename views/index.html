@@ -38,6 +38,9 @@
               <a class="nav-link" href="#link" data-target="#link" data-toggle="tab">関連リンク</a>
             </li>
             <li class="nav-item closeNavi">
+              <a class="nav-link" href="#bbs" data-target="#bbs" data-toggle="tab">簡易掲示板</a>
+            </li>
+            <li class="nav-item closeNavi">
               <a class="nav-link disabled" href="#" data-toggle="tab">準備中</a>
             </li>
             <!-- ブルダウンメニュー -->
@@ -231,24 +234,28 @@
             <li>ナビ選択時の自動クローズ　<span class="badge badge-success">完了</span></li>
           </div>
         </div>
+        <!-- 簡易掲示板 -->
+        <div id="bbs" class="tab-pane">
+          <p class="bold">簡易掲示板</p>
+      
+          <p>Tell me comment:</p>
+      
+          <form id="bbsform">
+            <input name="dream" type="text" maxlength="100" placeholder="Comment!" aria-labelledby="submit-dream">
+            <button type="submit" id="submit-dream" >Submit Comment</button>
+          </form>
+          <button type="submit" id="reset-dreams" onclick="resetdreams();">Reset Comments</button>
+      
+          <section class="dreams">
+            <ul id="dreams"></ul>
+          </section>
+        </div>
       </div>
-
-      <p class="bold">簡易的な掲示板を作成してみたいな。</p>
-      
-      <p>Tell me your hopes and dreams:</p>
-      
-      <form>
-        <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
-        <button type="submit" id="submit-dream">Submit Dream</button>
-      </form>
-      
-      <section class="dreams">
-        <ul id="dreams"></ul>
-      </section>
     </main>
     <!-- フッターはコピーライト -->
     <footer class="text-center text-muted border-top border-secondary mt-4">
       Copyright 2019 Saishi himagaku84
+      <p id="debug_msg"></p>
     </footer>
     
     <!-- Optional JavaScript -->
@@ -261,6 +268,11 @@
     <!-- ナビゲーションのオートクローズとスクロール -->
     <script>
       $(function () {
+//	param = location.search.substring(1);
+//	if(param != ""){
+//	  $('#debug_msg').text(param);
+//          $('.nav a[href="#bbs"]').tab('show');
+//	}
         // ナビのリンク押下
         $(".closeNavi").click(function(event) {
           // ナビのクローズ
